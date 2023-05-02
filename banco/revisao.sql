@@ -1,0 +1,11 @@
+--DDL data definition language
+--comando de definição do banco de dados
+--create database name
+--   drop database name
+--    create table name(colunas)
+--    drop table name
+
+--DML (data manipulation language)
+--select into tabela (colunas) values (valores)
+--delete from tabela
+--update colunas from tabela
