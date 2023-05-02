@@ -9,3 +9,10 @@ create table usuario(
     fone_usuario varchar(30) null,
     senha_usuario varchar(30) not null
 );
+/*
+insert into usuario
+(nome_usuario, email_usuario, fone_usuario, senha_usuario)
+values ('Timiaki', 'miti@gmail.com','(18)99999-9999', '12345');
+
+select * from usuario;
+*/
