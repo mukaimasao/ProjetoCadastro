@@ -14,28 +14,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cadastro de Usuários - IFSP</h1>
-    <form action="alterar_usuario_exe.php" method="POST">
+    <h1>Deletar Usuários - IFSP</h1>
+    <form action="deletar_usuario_exe.php" method="POST">
         <input type="hidden" name="id_usuario" value="<?php echo $row['id_usuario']?>">
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" value="<?php echo $row['nome_usuario']?>">
+            <input type="text" name="nome" id="nome" value="<?php echo $row['nome_usuario']?>"  disabled="">
         </div>
         <div>
             <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" value="<?php echo $row['email_usuario']?>">
+            <input type="text" name="email" id="email" value="<?php echo $row['email_usuario']?>"  disabled="">
         </div>
         <div>
             <label for="fone">Telefone</label>
             <input type="tel" name="fone" id="fone" 
             placeholder="Formato (99) 9999-9999"
-            pattern="\([0-9]{2}\)([9]{1})?[0-9]{4}-[0-9]{4}" value="<?php echo $row['fone_usuario']?>">
+            value="<?php echo $row['fone_usuario']?>"  disabled="">
         </div>
         <div>
             <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" value="<?php echo $row['senha_usuario']?>">
+            <input type="password" name="senha" id="senha" value="<?php echo $row['senha_usuario']?>"  disabled="">
         </div>
-        <input type="submit" value="Salvar">
+        <input type="submit" value="Deletar">
 
     </form>
 </body>
