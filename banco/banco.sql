@@ -7,7 +7,8 @@ create table usuario(
 	nome_usuario varchar(50) not null,   
     email_usuario varchar(50) not null,
     fone_usuario varchar(30) null,
-    senha_usuario varchar(30) not null
+    senha_usuario varchar(30) not null,
+    foto_usuario varchar(100) null
 );
 /*
 insert into usuario

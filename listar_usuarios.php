@@ -19,6 +19,7 @@
     <table align="center" border="1" width="700">
         <tr>
             <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
@@ -29,6 +30,11 @@
             do{
                 echo "<tr>";
                 echo "<td>".$row['id_usuario']."</td>";
+                if($row['foto_usuario'] == ""){
+                    echo "<td></td>";
+                }else{
+                    echo "<td> <img src='".$row['foto_usuario'] ."' width='80' height='100'/></td>";
+                }
                 echo "<td>".$row['nome_usuario']."</td>";
                 echo "<td>".$row['email_usuario']."</td>";
                 echo "<td>".$row['fone_usuario']."</td>";
