@@ -1,19 +1,22 @@
 <?php
 
     include('conexao.php');
-    $nome_foto = ;
+    
+    $id_usuario = $_POST['id_usuario'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $fone = $_POST['fone'];
+    $senha = $_POST['senha'];
+    $sql1 = "select * from usuario where id_usuario = '$id_usuario'";
+    $result = mysqli_query($con, $sql1);
+    $row = mysqli_fetch_array($result);
+    $nome_foto = $row['foto_usuario'];
     if(file_exists($_FILES['foto']['tmp_name'])){
         $pasta_destino = 'fotos/';
         $extensao = strtolower(substr($_FILES['foto']['name'],-4));
         $nome_foto = $pasta_destino.date("Ymd-His") . $extensao;
         move_uploaded_file($_FILES['foto']['tmp_name'], $nome_foto);
     }
-    $id_usuario = $_POST['id_usuario'];
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $fone = $_POST['fone'];
-    $senha = $_POST['senha'];
-
     
     
     echo "<h1>Alteração de dados</h1>";
